@@ -1,12 +1,16 @@
-public class Video {
-    String title;
-    int likes;
-    int views;
+import java.time.LocalDate;
 
-    Video(String title) {
+public class Video {
+    private String title;
+    private int likes;
+    private int views;
+    private LocalDate uploadDate;
+
+    Video(String title, LocalDate date) {
         this.title = title;
         likes = 0;
         views = 0;
+        this.uploadDate = date;
     }
 
     Video(String title, int likes, int views) {
@@ -41,5 +45,9 @@ public class Video {
 
     public int getViews() {
         return views;
+    }
+
+    public LocalDate getDate() {
+        return uploadDate;
     }
 }
